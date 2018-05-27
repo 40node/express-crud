@@ -10,9 +10,13 @@
       <p><%= key %>: <%= value %></p>
     <% }); %>
 
-    <form action="/team_name_url/" method="post">
-      <label for="team_name">Enter name: </label>
-      <input id="team_name" type="text" name="name_field" value="Default name for team.">
+    <form action="/create/" method="post">
+      <label for="last_name">名前(姓): </label>
+      <input id="last_name" type="text" name="name_field" value="Default name for team.">
+      <label for="first_name">名前(名): </label>
+      <input id="first_name" type="text" name="name_field" value="Default name for team.">
+      <label for="email">メールアドレス: </label>
+      <input id="email" type="text" name="name_field" value="Default name for team.">
       <input type="submit" value="OK">
   </form>
 
