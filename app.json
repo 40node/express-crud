@@ -1,0 +1,12 @@
+{
+  "name": "express-crud",
+  "scripts": {
+    "postdeploy": "sequelize db:migrate"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+   ],
+  "buildpacks": [
+    { "url": "heroku/nodejs" }
+  ]
+}
