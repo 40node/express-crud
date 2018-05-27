@@ -3,20 +3,5 @@
   "description": "Sample: CRUD Web Application with Express/Node.js",
   "repository": "https://github.com/40node/express-crud",
   "success_url": "/users",
-  "scripts": {
-    "postdeploy": "sequelize db:migrate"
-  },
-  "addons": [
-    {
-      "plan": "heroku-postgresql:hobby-dev",
-      "options": {
-        "version": "9.6"
-      }
-    }
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
-  ]  
+  "addons": [ "heroku-postgresql" ]
 }
