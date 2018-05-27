@@ -4,13 +4,7 @@
     "postdeploy": "sequelize db:migrate"
   },
   "addons": [
-    "heroku-postgresql",
-    {
-      "plan": "heroku-postgresql:hobby-dev",
-      "options": {
-        "version": "9.6"
-      }
-    }
+    "heroku-postgresql"
    ],
   "buildpacks": [
     { "url": "heroku/nodejs" }
