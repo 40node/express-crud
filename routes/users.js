@@ -1,9 +1,11 @@
+// モデル情報の読み込み
 const models = require('../models');
 
+// Express ルーターのおまじない
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+// データを10件読み込んで、Web画面をレンダリングする
 router.get('/', function(req, res) {
   models.User.findAll({
     order: [
@@ -18,6 +20,7 @@ router.get('/', function(req, res) {
   });  
 });
 
+// 新規追加ユーザーの作成
 router.post('/create', function(req, res) {
   models.User.create({
     first_name: req.body.first_name,
@@ -28,6 +31,7 @@ router.post('/create', function(req, res) {
   });
 });
 
+// 対象ID のユーザー情報を更新
 router.post('/update/:userId', function(req, res) {
   models.User.update({
     first_name: req.body.first_name,
@@ -42,6 +46,7 @@ router.post('/update/:userId', function(req, res) {
   });
 });
 
+// 対象ID のユーザー情報を削除
 router.get('/destroy/:userId', function(req, res) {
   models.User.destroy({
     where: {
@@ -52,4 +57,5 @@ router.get('/destroy/:userId', function(req, res) {
   });
 });
 
+// 外部から利用する場合のおまじない
 module.exports = router;
