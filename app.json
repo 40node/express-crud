@@ -1,6 +1,12 @@
 {
   "name": "express crud",
   "description": "Sample: CRUD Web Application with Express/Node.js",
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment",
+      "value": "production"
+    }
+  },
   "repository": "https://github.com/40node/express-crud",
   "success_url": "/users",
   "addons": [ "heroku-postgresql" ]
