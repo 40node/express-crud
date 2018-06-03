@@ -32,14 +32,14 @@ router.post('/create', function(req, res) {
 });
 
 // 対象ID のユーザー情報を更新
-router.post('/update/:userId', function(req, res) {
+router.post('/update/:id', function(req, res) {
   models.User.update({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email
   }, {
     where: {
-      id: req.params.userId
+      id: req.params.id
     }
   }).then(function() {
     res.redirect('/users');
@@ -47,10 +47,10 @@ router.post('/update/:userId', function(req, res) {
 });
 
 // 対象ID のユーザー情報を削除
-router.get('/destroy/:userId', function(req, res) {
+router.get('/destroy/:id', function(req, res) {
   models.User.destroy({
     where: {
-      id: req.params.userId
+      id: req.params.id
     }
   }).then(function() {
     res.redirect('/users');
